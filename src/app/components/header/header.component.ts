@@ -20,7 +20,7 @@ export class HeaderComponent {
 
   openDialog(): void {
     this.dialog.open(DialogAddEditComponent, {
-      width: '250px'
+      width: '500px'
     });
   }
 }

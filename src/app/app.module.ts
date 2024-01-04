@@ -6,6 +6,10 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './components/header/header.component';
 import { DialogAddEditComponent } from './components/dialog/dialog-add-edit.component';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -15,7 +19,9 @@ import { DialogAddEditComponent } from './components/dialog/dialog-add-edit.comp
     AppRoutingModule,
     BrowserAnimationsModule,
     HeaderComponent,
-    DialogAddEditComponent
+    DialogAddEditComponent,
+    MatInputModule,
+    MatFormFieldModule
   ],
   providers: [],
   bootstrap: [AppComponent]
