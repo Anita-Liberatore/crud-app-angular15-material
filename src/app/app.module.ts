@@ -8,6 +8,9 @@ import { HeaderComponent } from './components/header/header.component';
 import { DialogAddEditComponent } from './components/dialog/dialog-add-edit.component';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
+
 
 
 @NgModule({
@@ -21,7 +24,9 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     HeaderComponent,
     DialogAddEditComponent,
     MatInputModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatDatepickerModule,
+    MatNativeDateModule
   ],
   providers: [],
   bootstrap: [AppComponent]
