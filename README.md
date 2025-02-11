@@ -111,32 +111,6 @@ export const environment = {
 };
 ```
 
-### API Endpoints
-
-- GET `/employees` - Fetch all employees
-- GET `/employees/:id` - Fetch single employee
-- POST `/employees` - Create new employee
-- PUT `/employees/:id` - Update employee
-- DELETE `/employees/:id` - Delete employee
-
-## 🎯 Core Features Implementation
-
-### Employee Management
-
-- Add new employees with validated form inputs
-- View employee list with sortable columns
-- Edit existing employee details
-- Delete employees with confirmation dialog
-- Search and filter employees
-
-### Form Validation Rules
-
-- First Name: Required, minimum 2 characters
-- Last Name: Required, minimum 2 characters
-- Email: Required, valid email format
-- Department: Required, select from predefined list
-- Salary: Required, positive number
-
 ## 🔍 Testing
 
 The project includes both unit tests and e2e tests:
