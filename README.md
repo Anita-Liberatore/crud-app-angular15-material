@@ -1,27 +1,168 @@
-# CrudApp
+# Angular 15 CRUD Dashboard
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.1.
+A modern, responsive CRUD (Create, Read, Update, Delete) dashboard built with Angular 15 and Angular Material. This application demonstrates best practices for building data-driven web applications with comprehensive form handling, data management, and Material Design components.
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## 📋 Prerequisites
 
-## Code scaffolding
+Before you begin, ensure you have the following installed:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- **Node.js** (v14.x or higher) & **npm** (v6.x or higher)
+  - Download from [Node.js Official Website](https://nodejs.org/)
+  - Verify installation: `node --version` and `npm --version`
 
-## Build
+- **Angular CLI** (v15.x)
+  ```bash
+  npm install -g @angular/cli
+  ng version
+  ```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- **JSON Server** (for mock API)
+  ```bash
+  npm install -g json-server
+  ```
 
-## Running unit tests
+## 🛠️ Installation
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/Anita-Liberatore/crud-app-angular15-material.git
+   cd crud-app-angular15-material
+   ```
 
-## Running end-to-end tests
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+3. **Set up the mock database**
+   Create a `db.json` file in the root directory:
+   ```json
+   {
+     "employees": [
+       {
+         "id": 1,
+         "firstName": "John",
+         "lastName": "Doe",
+         "email": "john@example.com",
+         "department": "IT",
+         "salary": 75000
+       }
+     ]
+   }
+   ```
 
-## Further help
+## 🚀 Running the Application
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+1. **Start the mock API server**
+   ```bash
+   json-server --watch db.json
+   ```
+   The API will be available at `http://localhost:4200`
+
+2. **Start the Angular development server**
+   ```bash
+   ng serve
+   ```
+   Navigate to `http://localhost:4200`
+
+
+## 📝 Available Scripts
+
+- **Development server**
+  ```bash
+  ng serve
+  ```
+
+- **Production build**
+  ```bash
+  ng build --configuration production
+  ```
+
+- **Run unit tests**
+  ```bash
+  ng test
+  ```
+
+- **Run end-to-end tests**
+  ```bash
+  ng e2e
+  ```
+
+- **Lint project**
+  ```bash
+  ng lint
+  ```
+
+## 🔧 Configuration
+
+### Environment Variables
+
+Create `environment.ts` and `environment.prod.ts` files in the `src/environments` directory:
+
+```typescript
+export const environment = {
+  production: false,
+  apiUrl: 'http://localhost:4200'
+};
+```
+
+### API Endpoints
+
+- GET `/employees` - Fetch all employees
+- GET `/employees/:id` - Fetch single employee
+- POST `/employees` - Create new employee
+- PUT `/employees/:id` - Update employee
+- DELETE `/employees/:id` - Delete employee
+
+## 🎯 Core Features Implementation
+
+### Employee Management
+
+- Add new employees with validated form inputs
+- View employee list with sortable columns
+- Edit existing employee details
+- Delete employees with confirmation dialog
+- Search and filter employees
+
+### Form Validation Rules
+
+- First Name: Required, minimum 2 characters
+- Last Name: Required, minimum 2 characters
+- Email: Required, valid email format
+- Department: Required, select from predefined list
+- Salary: Required, positive number
+
+## 🔍 Testing
+
+The project includes both unit tests and e2e tests:
+
+```bash
+# Run unit tests with coverage report
+ng test --code-coverage
+
+# Run e2e tests
+ng e2e
+```
+
+## 📚 Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## 📝 License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
+
+## 🤝 Support
+
+For support, email support@example.com or join our Slack channel.
+
+## 🙌 Acknowledgments
+
+- Angular Team for the fantastic framework
+- Material Design Team for the UI components
+- JSON Server Team for the mock API functionality
