@@ -41,12 +41,16 @@ Before you begin, ensure you have the following installed:
    {
      "employees": [
        {
-         "id": 1,
-         "firstName": "John",
-         "lastName": "Doe",
-         "email": "john@example.com",
-         "department": "IT",
-         "salary": 75000
+         "id": "199",
+         "firstName": "Nancy",
+         "lastName": "Gladdis",
+         "email": "ngladdis5i@posterous.com",
+         "dob": "2001-11-15T10:33:48Z",
+         "gender": "Female",
+         "education": "Graduate",
+         "company": "Flashpoint",
+         "experience": 20,
+         "package": 17
        }
      ]
    }
